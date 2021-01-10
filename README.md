@@ -1,6 +1,6 @@
-#-to run the app :
+# -to run the app :
 
 npm install
 2.npm start
 
-##(minimal node v10)
+## (minimal node v10)
