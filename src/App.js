@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import 'primereact/resources/themes/saga-blue/theme.css';
+import 'primereact/resources/themes/saga-orange/theme.css';
 import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 import './App.css';
 import useLocalStorage from './customHooks/localStorageHook'
 import MovieList from './components/MovieList'
@@ -17,14 +18,14 @@ function App() {
          .then(res => setFilmData(res));
     }
       fetchData();
-      console.log('useEffect', filmData)
+      // console.log('useEffect', filmData)
       
   }, []);
+  
   return (
-    
-     <div>
-        <MovieList movies={filmData.results}/>
-     </div>
+         <div>
+            <MovieList movies={filmData.results}/>
+         </div>
      
   )
 }
