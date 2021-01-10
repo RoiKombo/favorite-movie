@@ -5,19 +5,21 @@ import './App.css';
 import useLocalStorage from './customHooks/localStorageHook'
 import MovieList from './components/MovieList'
 
+
+
 function App() {
   const [filmData, setFilmData] = useState({ results: []})
   
   useEffect(() => {
       async function fetchData() {
-      const res = await fetch("https://swapi.dev/api/films/");
-      res.json()
+      const res = await fetch('swapi.json');
+      res.json()//change late on!!!
          .then(res => setFilmData(res));
     }
       fetchData();
+      console.log('useEffect', filmData)
       
   }, []);
-
   return (
     
      <div>

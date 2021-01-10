@@ -5,13 +5,13 @@ import Item from '../components/Item'
 
 export default function MovieList(data) {
     // const [filmData, setFilmData] = useState(data)
-    console.log(data)
+    // console.log('movieList',data)
       
     return (
         <div>
         { !data ? 
              (
-                 <div> no data yet sir </div>
+                 <div>no data yet</div>
                  )
          :  (  
              <DataTable value={data.movies}>
